@@ -20,6 +20,32 @@ vscode snippets. Like for example:
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 - [coc-snippets](https://github.com/neoclide/coc-snippets)
 
+### Add snippets from a framework to a filetype.
+
+There's extra snippets included in this repo but they are not added default,
+since it would be irrelevant for people not using those frameworks. See
+[`snippets/frameworks`](https://github.com/rafamadriz/friendly-snippets/tree/main/snippets/frameworks)
+
+For example: if you want to add rails snippets to ruby.
+
+With LuaSnip:
+
+```lua
+require'luasnip'.filetype_extend("ruby", {"rails"})
+```
+
+This method is going to work globally on all open buffers with `ruby` filetype.
+Alternatively you can do `set filetype=ruby.rails` so it only works on a
+specific buffer, but this is going to mess up with syntax highlighting.
+
+With vim-vsnip:
+
+```viml
+let g:vsnip_filetypes.rails = ['ruby']
+```
+
+For more info related to this change see [#88](https://github.com/rafamadriz/friendly-snippets/issues/88)
+
 ### Install
 
 Use your plugin manager of choice, e.g.
@@ -44,40 +70,6 @@ CocInstall https://github.com/rafamadriz/friendly-snippets@main
 ![JS gif](https://user-images.githubusercontent.com/67771985/131255342-e393165a-e4b1-401e-9084-a782b9dd3fef.gif)
 
 ##### NOTE: Using [nvim-compe](https://github.com/hrsh7th/nvim-compe) with [vim-vsnip](https://github.com/hrsh7th/vim-vsnip) on the videos.
-
-### Snippets for:
-
-- HTML, Pug, Jade
-- CSS, Sass, Less, Stylus
-- JavaScript, Typescript, Javascriptreact, Typescriptreact
-- Vue
-- PHP
-- Python
-- C
-- C++
-- C#
-- ReScript
-- Rust
-- Go
-- GDScript (Godot)
-- Haskell
-- Eruby
-- Ruby
-- Swift
-- Java
-- Fortran
-- Lua
-- LaTex
-- Shell
-- Markdown
-- Sql
-- Rails
-- Elixir
-- Fennel
-- Cobol
-- Jekyll(Markdown)
-- Kotlin
-- R(Markdown)
 
 ## TODO
 
