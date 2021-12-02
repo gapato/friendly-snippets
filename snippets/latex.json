@@ -5,12 +5,14 @@
 		"description": "\\item on a newline"
 	},
 	"subscript": {
+    "luasnip" : { "autotrigger" : true },
 		"prefix": "__",
 		"body": "_{${1:${TM_SELECTED_TEXT}}}",
 		"description": "subscript"
 	},
 	"superscript": {
-		"prefix": "**",
+    "luasnip" : { "autotrigger" : true },
+		"prefix": "^^",
 		"body": "^{${1:${TM_SELECTED_TEXT}}}",
 		"description": "superscript"
 	},
@@ -35,7 +37,8 @@
 		"description": "partial derivative symbol"
 	},
 	"fraction": {
-		"prefix": "@/",
+    "luasnip" : { "autotrigger" : true },
+		"prefix": "//",
 		"body": "\\frac{$1}{$2}$0",
 		"description": "fraction"
 	},
@@ -501,19 +504,22 @@
 		"description": "Omega"
 	},
 	"(": {
-		"prefix": "@(",
+		"prefix": "((",
 		"body": "\\left( ${1:${TM_SELECTED_TEXT}} \\right)",
-		"description": "left( ... right)"
+		"description": "left( ... right)",
+		"luasnip" : { "autotrigger" : true }
 	},
 	"{": {
-		"prefix": "@{",
+		"luasnip" : { "autotrigger" : true },
+		"prefix": "{{",
 		"body": "\\left\\{ ${1:${TM_SELECTED_TEXT}} \\right\\\\\\\\}",
 		"description": "left{ ... right}"
 	},
 	"[": {
-		"prefix": "@[",
+		"prefix": "[[",
 		"body": "\\left[ ${1:${TM_SELECTED_TEXT}} \\right]",
-		"description": "left[ ... right]"
+		"description": "left[ ... right]",
+	        "luasnip" : { "autotrigger" : true }
 	},
 	"wrapEnv": {
 		"body": "\n\\begin{$1}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{$1}",
