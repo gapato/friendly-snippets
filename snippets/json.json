@@ -1,0 +1,30 @@
+{
+  "item": {
+    "prefix": "mmdi",
+    "body": [
+      "{ \"key\" : \"$1\",",
+      "\"symbol\" : \"$2\",",
+      "\"fr\" : { \"txt\" : \"$3\" },",
+      "\"en\" : { \"txt\" : \"$4\" },",
+      "\"de\" : { \"txt\" : \"$5\" },",
+      "\"it\" : { \"txt\" : \"$6\" }",
+      "}$0"
+    ],
+    "description": "MDD item"
+  },
+  "translation": {
+    "prefix": "mmdt",
+    "body": "\"$1\" : { \"txt\" : \"$2\" }$0",
+    "description": "MDD translation"
+  },
+  "translations": {
+    "prefix": "mmtt",
+    "body": [
+      "\"fr\" : { \"txt\" : \"$1\" },",
+      "\"en\" : { \"txt\" : \"$2\" },",
+      "\"de\" : { \"txt\" : \"$3\" },",
+      "\"it\" : { \"txt\" : \"$4\" }$0"
+    ],
+    "description": "MDD translations"
+  }
+}

@@ -58,6 +58,10 @@
         "path": "./snippets/glsl.json"
       },
       {
+        "language": "json",
+        "path": "./snippets/json.json"
+      },
+      {
         "language": "liquid",
         "path": "./snippets/liquid.json"
       },
